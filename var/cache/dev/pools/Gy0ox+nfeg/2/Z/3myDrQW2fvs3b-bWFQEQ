@@ -1,0 +1,66 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['ApiPlatform\\Core\\Annotation\\ApiResource'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiResource')),
+            clone ($p['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'itemOperations' => [
+                    [
+                        'getId' => [
+                            'method' => 'GET',
+                            'path' => '/users/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                        ],
+                        'deleteId' => [
+                            'method' => 'DELETE',
+                            'path' => '/users/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                        ],
+                        'putId' => [
+                            'method' => 'PUT',
+                            'path' => '/users/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                        ],
+                    ],
+                ],
+                'collectionOperations' => [
+                    [
+                        'getUser' => [
+                            'method' => 'GET',
+                            'path' => '/users',
+                        ],
+                        'loginUser' => [
+                            'method' => 'POST',
+                            'path' => '/login',
+                            'controller' => 'App\\Controller\\LoginUser',
+                        ],
+                        'postUser' => [
+                            'method' => 'POST',
+                            'path' => '/users',
+                            'controller' => 'App\\Controller\\PostUser',
+                        ],
+                    ],
+                ],
+                'repositoryClass' => [
+                    1 => 'App\\Repository\\UserRepository',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+            $o[1],
+        ],
+        []
+    );
+
+}];

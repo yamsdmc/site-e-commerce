@@ -1,0 +1,78 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['ApiPlatform\\Core\\Metadata\\Resource\\ResourceMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Metadata\\Resource\\ResourceMetadata')),
+        ],
+        null,
+        [
+            'ApiPlatform\\Core\\Metadata\\Resource\\ResourceMetadata' => [
+                'shortName' => [
+                    'SubCategory',
+                ],
+                'description' => [
+                    '',
+                ],
+                'itemOperations' => [
+                    [
+                        'getId' => [
+                            'method' => 'GET',
+                            'path' => '/sub_categories/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                            'controller' => 'App\\Controller\\GetSubProductCategory',
+                            'input' => null,
+                            'output' => null,
+                        ],
+                        'deleteId' => [
+                            'method' => 'DELETE',
+                            'path' => '/sub_categories/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                            'input' => null,
+                            'output' => null,
+                        ],
+                        'putId' => [
+                            'method' => 'PUT',
+                            'path' => '/sub_categories/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                            'input' => null,
+                            'output' => null,
+                        ],
+                    ],
+                ],
+                'collectionOperations' => [
+                    [
+                        'get' => [
+                            'method' => 'GET',
+                        ],
+                        'post' => [
+                            'method' => 'POST',
+                        ],
+                    ],
+                ],
+                'graphql' => [
+                    [
+                        'query' => [],
+                        'delete' => [],
+                        'update' => [],
+                        'create' => [],
+                    ],
+                ],
+                'attributes' => [
+                    [
+                        'input' => null,
+                        'output' => null,
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

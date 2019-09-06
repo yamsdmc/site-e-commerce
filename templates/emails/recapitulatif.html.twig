@@ -1,0 +1,22 @@
+<h2>Merci de votre commande, GOODBUY vous remercie !</h2>
+
+<h3>Voici un recapitulatif de votre commande : </h3>
+    <hr/>
+    {% for panier in paniers %}
+        <div> Votre article : {{ panier.title }} </div>
+        <div> Nombre d'articles : {{ panier.quantity }} </div>
+        <div> Prix : {{ panier.price }} €</div>
+        <div> Poids : {{ panier.weight }} Kg</div>
+        <hr/>
+    {% endfor %}
+
+    <h4> Prix Final :  {{final}} €  (Promos et Code reduction compris)</h4>
+
+
+
+    <div>Recapitulatif de vos informations.</div>
+
+    <div>Livree a {{ infos.firstname }} {{ infos.lastname }} </div>
+    <div>Adresse de livraison :  {{ infos.adress }} , {{ infos.city }}  {{ infos.country | upper  }} </div>
+
+<h3>Tout ces produits vous seront tres prochainement remis, en esperant vous revoir tres bientot sur GOODBUY !</h3>

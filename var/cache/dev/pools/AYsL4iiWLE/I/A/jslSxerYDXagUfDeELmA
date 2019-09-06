@@ -1,0 +1,100 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['ApiPlatform\\Core\\Metadata\\Resource\\ResourceMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Metadata\\Resource\\ResourceMetadata')),
+        ],
+        null,
+        [
+            'ApiPlatform\\Core\\Metadata\\Resource\\ResourceMetadata' => [
+                'shortName' => [
+                    'Panier',
+                ],
+                'description' => [
+                    '',
+                ],
+                'itemOperations' => [
+                    [
+                        'getId' => [
+                            'method' => 'GET',
+                            'path' => '/paniers/user/{id}',
+                            'controller' => 'App\\Controller\\GetUserPanier',
+                            'read' => false,
+                            'input' => null,
+                            'output' => null,
+                        ],
+                        'getOrder' => [
+                            'method' => 'GET',
+                            'path' => '/orders/user/{id}',
+                            'controller' => 'App\\Controller\\GetUserOrder',
+                            'read' => false,
+                            'input' => null,
+                            'output' => null,
+                        ],
+                        'deleteId' => [
+                            'method' => 'DELETE',
+                            'path' => '/paniers/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                            'input' => null,
+                            'output' => null,
+                        ],
+                        'putId' => [
+                            'method' => 'PUT',
+                            'path' => '/paniers/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                            'input' => null,
+                            'output' => null,
+                        ],
+                    ],
+                ],
+                'collectionOperations' => [
+                    [
+                        'getPanier' => [
+                            'method' => 'GET',
+                            'path' => '/paniers',
+                            'input' => null,
+                            'output' => null,
+                        ],
+                        'postPanier' => [
+                            'method' => 'POST',
+                            'path' => '/paniers',
+                            'controller' => 'App\\Controller\\PostPanier',
+                            'read' => false,
+                            'input' => null,
+                            'output' => null,
+                        ],
+                        'postBill' => [
+                            'method' => 'POST',
+                            'path' => '/paniers/user/bill',
+                            'controller' => 'App\\Controller\\PanierUserBill',
+                            'read' => false,
+                            'input' => null,
+                            'output' => null,
+                        ],
+                    ],
+                ],
+                'graphql' => [
+                    [
+                        'query' => [],
+                        'delete' => [],
+                        'update' => [],
+                        'create' => [],
+                    ],
+                ],
+                'attributes' => [
+                    [
+                        'input' => null,
+                        'output' => null,
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

@@ -1,0 +1,68 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['ApiPlatform\\Core\\Annotation\\ApiResource'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiResource')),
+            clone ($p['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'itemOperations' => [
+                    [
+                        'getId' => [
+                            'method' => 'GET',
+                            'path' => '/user_infos/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                            'controller' => 'App\\Controller\\GetUserInfoId',
+                            'read' => false,
+                        ],
+                        'deleteId' => [
+                            'method' => 'DELETE',
+                            'path' => '/user_infos/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                        ],
+                        'putId' => [
+                            'method' => 'PUT',
+                            'path' => '/user_infos/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                        ],
+                    ],
+                ],
+                'collectionOperations' => [
+                    [
+                        'getUserInfos' => [
+                            'method' => 'GET',
+                            'path' => '/user_infos',
+                        ],
+                        'postUserInfos' => [
+                            'method' => 'POST',
+                            'path' => '/user_infos',
+                        ],
+                        'validateId' => [
+                            'method' => 'POST',
+                            'path' => '/paniers/user/validate',
+                            'controller' => 'App\\Controller\\ValidateUserPanier',
+                            'read' => false,
+                        ],
+                    ],
+                ],
+                'repositoryClass' => [
+                    1 => 'App\\Repository\\UserInfoRepository',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+            $o[1],
+        ],
+        []
+    );
+
+}];

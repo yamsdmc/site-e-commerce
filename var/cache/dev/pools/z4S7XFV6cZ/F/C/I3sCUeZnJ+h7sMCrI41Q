@@ -1,0 +1,73 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['ApiPlatform\\Core\\Annotation\\ApiResource'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiResource')),
+            clone ($p['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'itemOperations' => [
+                    [
+                        'getId' => [
+                            'method' => 'GET',
+                            'path' => '/paniers/user/{id}',
+                            'controller' => 'App\\Controller\\GetUserPanier',
+                            'read' => false,
+                        ],
+                        'getOrder' => [
+                            'method' => 'GET',
+                            'path' => '/orders/user/{id}',
+                            'controller' => 'App\\Controller\\GetUserOrder',
+                            'read' => false,
+                        ],
+                        'deleteId' => [
+                            'method' => 'DELETE',
+                            'path' => '/paniers/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                        ],
+                        'putId' => [
+                            'method' => 'PUT',
+                            'path' => '/paniers/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                        ],
+                    ],
+                ],
+                'collectionOperations' => [
+                    [
+                        'getPanier' => [
+                            'method' => 'GET',
+                            'path' => '/paniers',
+                        ],
+                        'postPanier' => [
+                            'method' => 'POST',
+                            'path' => '/paniers',
+                            'controller' => 'App\\Controller\\PostPanier',
+                            'read' => false,
+                        ],
+                        'postBill' => [
+                            'method' => 'POST',
+                            'path' => '/paniers/user/bill',
+                            'controller' => 'App\\Controller\\PanierUserBill',
+                            'read' => false,
+                        ],
+                    ],
+                ],
+                'repositoryClass' => [
+                    1 => 'App\\Repository\\PanierRepository',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+            $o[1],
+        ],
+        []
+    );
+
+}];

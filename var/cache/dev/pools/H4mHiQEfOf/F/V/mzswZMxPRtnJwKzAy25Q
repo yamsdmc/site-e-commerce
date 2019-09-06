@@ -1,0 +1,114 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['ApiPlatform\\Core\\Metadata\\Resource\\ResourceMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Metadata\\Resource\\ResourceMetadata')),
+        ],
+        null,
+        [
+            'ApiPlatform\\Core\\Metadata\\Resource\\ResourceMetadata' => [
+                'shortName' => [
+                    'Product',
+                ],
+                'description' => [
+                    '',
+                ],
+                'itemOperations' => [
+                    [
+                        'getProductId' => [
+                            'method' => 'GET',
+                            'path' => '/products/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                            'controller' => 'App\\Controller\\GetProductId',
+                            'input' => null,
+                            'output' => null,
+                        ],
+                        'fillProductId' => [
+                            'method' => 'POST',
+                            'path' => '/products/fill/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                            'controller' => 'App\\Controller\\FillProductId',
+                            'read' => false,
+                            'input' => null,
+                            'output' => null,
+                        ],
+                        'deleteId' => [
+                            'method' => 'DELETE',
+                            'path' => '/products/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                            'input' => null,
+                            'output' => null,
+                        ],
+                        'putId' => [
+                            'method' => 'PUT',
+                            'path' => '/products/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                            'input' => null,
+                            'output' => null,
+                        ],
+                    ],
+                ],
+                'collectionOperations' => [
+                    [
+                        'getProduct' => [
+                            'method' => 'GET',
+                            'path' => '/products',
+                            'input' => null,
+                            'output' => null,
+                        ],
+                        'postBill' => [
+                            'method' => 'GET',
+                            'path' => '/admin/stats',
+                            'controller' => 'App\\Controller\\AdminStats',
+                            'read' => false,
+                            'input' => null,
+                            'output' => null,
+                        ],
+                        'postProduct' => [
+                            'method' => 'POST',
+                            'path' => '/products',
+                            'input' => null,
+                            'output' => null,
+                        ],
+                        'trendProduct' => [
+                            'method' => 'GET',
+                            'path' => '/products/trends',
+                            'controller' => 'App\\Controller\\GetTrends',
+                            'input' => null,
+                            'output' => null,
+                        ],
+                    ],
+                ],
+                'graphql' => [
+                    [
+                        'query' => [],
+                        'delete' => [],
+                        'update' => [],
+                        'create' => [],
+                    ],
+                ],
+                'attributes' => [
+                    [
+                        'input' => null,
+                        'output' => null,
+                        'filters' => [
+                            'annotated_app_entity_product_api_platform_core_bridge_doctrine_orm_filter_search_filter',
+                            'annotated_app_entity_product_api_platform_core_bridge_doctrine_orm_filter_range_filter',
+                        ],
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+}];

@@ -1,0 +1,91 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['ApiPlatform\\Core\\Annotation\\ApiResource'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiResource')),
+            clone ($p['ApiPlatform\\Core\\Annotation\\ApiFilter'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('ApiPlatform\\Core\\Annotation\\ApiFilter')),
+            clone $p['ApiPlatform\\Core\\Annotation\\ApiFilter'],
+            clone ($p['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'itemOperations' => [
+                    [
+                        'getProductId' => [
+                            'method' => 'GET',
+                            'path' => '/products/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                            'controller' => 'App\\Controller\\GetProductId',
+                        ],
+                        'fillProductId' => [
+                            'method' => 'POST',
+                            'path' => '/products/fill/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                            'controller' => 'App\\Controller\\FillProductId',
+                            'read' => false,
+                        ],
+                        'deleteId' => [
+                            'method' => 'DELETE',
+                            'path' => '/products/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                        ],
+                        'putId' => [
+                            'method' => 'PUT',
+                            'path' => '/products/{id}',
+                            'requirements' => [
+                                'id' => '\\d+',
+                            ],
+                        ],
+                    ],
+                ],
+                'collectionOperations' => [
+                    [
+                        'getProduct' => [
+                            'method' => 'GET',
+                            'path' => '/products',
+                        ],
+                        'postProduct' => [
+                            'method' => 'POST',
+                            'path' => '/products',
+                        ],
+                        'trendProduct' => [
+                            'method' => 'GET',
+                            'path' => '/products/trends',
+                            'controller' => 'App\\Controller\\GetTrends',
+                        ],
+                    ],
+                ],
+                'filterClass' => [
+                    1 => 'ApiPlatform\\Core\\Bridge\\Doctrine\\Orm\\Filter\\SearchFilter',
+                    'ApiPlatform\\Core\\Bridge\\Doctrine\\Orm\\Filter\\RangeFilter',
+                ],
+                'properties' => [
+                    1 => [
+                        'title' => 'partial',
+                    ],
+                    [
+                        'price',
+                    ],
+                ],
+                'repositoryClass' => [
+                    3 => 'App\\Repository\\ProductRepository',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+            $o[1],
+            $o[2],
+            $o[3],
+        ],
+        []
+    );
+
+}];

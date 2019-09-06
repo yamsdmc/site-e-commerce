@@ -1,0 +1,57 @@
+
+<h1> FACTURE </h1>
+
+<h2>GOODBUY</h2>
+<h4>Gagnant a tous les moments !</h4>
+
+<div>Adresse Postale : 14 Rue Fructidor, SAINT-OUEN 93400</div>
+<div>Telephone : +33 6 65 43 21 34</div>
+<div>Fax : +33 9 65 43 21 34 </div>
+
+<h3>Voici la facture de votre  {{dates}} </h3>
+<div>Objet : facture suite a commande</div>
+
+
+<h4>Adresse de facturation</h4>
+    <hr/>
+    <br/>
+    <table style="border-collapse: collapse;  width: 100%;" >
+    <tr>
+        <th style="background-color : grey;border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;">Produit </th>
+        <th style="background-color : grey;border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;">Quantite</th>
+        <th style="background-color : grey;border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;">Prix </th>
+        <th style="background-color : grey;border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;">Poids </th>
+    </tr>
+    {% for panier in paniers %}
+        <tr>
+        <th style="border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;"> {{ panier.title }} </th>
+        <th style="border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;"> {{ panier.quantity }} </th>
+        <th style="border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;"> {{ panier.price }} €</th>
+        <th style="border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;"> {{ panier.weight }} Kg</th>
+        </tr>
+    {% endfor %}
+    <tr>
+    <th style="background-color : grey; border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;"> TOTAL : {{final}} € (Promos et Code reduction compris)</th>
+    </tr>
+    </table>
+
+
+<h5>GOODBUY , societe au capital de 73 000€ , SIRET : 0345N4095P</h5>

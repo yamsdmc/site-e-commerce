@@ -1,6 +1,6 @@
 # site e-commerce
 
-Back-end e-commerce développé sous Symfony 4 et API Plateform.
+Back e-commerce développé sous Symfony 4 et API Plateform.
 
 Le projet a était développé en équipe de 3.
 

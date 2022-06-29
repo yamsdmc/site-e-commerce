@@ -1,4 +1,4 @@
-# site-e-commerce
+# site e-commerce
 
 Back-end e-commerce développé sous Symfony 4 et API Plateform.
 
